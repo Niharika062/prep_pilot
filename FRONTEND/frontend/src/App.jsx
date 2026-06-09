@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import Interview from "./pages/Interview"
-import Report from "./pages/Report"
-import Login from "./pages/Login"
-import Signup from "./pages/Signup"
+import Home from "./pages/home"
+import Interview from "./pages/interview"
+import Report from "./pages/report"
+import Login from "./pages/login"
+import Signup from "./pages/signup"
 
 function App() {
   return (
