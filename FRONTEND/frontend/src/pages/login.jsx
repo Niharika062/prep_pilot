@@ -9,7 +9,7 @@ function Login() {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post("http://localhost:8000/api/auth/login", { email, password })
+            const response = await axios.post("https://prep-pilot-zsek.onrender.com/api/auth/login", { email, password })
             localStorage.setItem("token", response.data.token)
             navigate("/home")
         } catch (error) {

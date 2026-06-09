@@ -31,14 +31,14 @@ function Home() {
             formData.append("numberOfQuestions", numberOfQuestions)
             formData.append("resume", resume)
 
-            response = await axios.post("http://localhost:8000/api/session/start-with-resume", formData, {
+            response = await axios.post("https://prep-pilot-zsek.onrender.com/api/session/start-with-resume", formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     "Content-Type": "multipart/form-data"
                 }
             })
         } else {
-            response = await axios.post("http://localhost:8000/api/session/start", {
+            response = await axios.post("https://prep-pilot-zsek.onrender.com/api/session/start", {
                 role,
                 numberOfQuestions
             }, {

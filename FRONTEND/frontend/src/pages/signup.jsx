@@ -10,7 +10,7 @@ function Signup() {
 
     const handleSignup = async () => {
         try {
-            const response = await axios.post("http://localhost:8000/api/auth/register", { name, email, password })
+            const response = await axios.post("https://prep-pilot-zsek.onrender.com/api/auth/register", { name, email, password })
             localStorage.setItem("token", response.data.token)
             navigate("/home")
         } catch (error) {

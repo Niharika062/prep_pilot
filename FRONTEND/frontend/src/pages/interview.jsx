@@ -25,7 +25,7 @@ function Interview() {
     const submitAnswer = async () => {
     const token = localStorage.getItem("token")
     const response = await axios.post(
-        `http://localhost:8000/api/session/${sessionId}/answer`,
+        `https://prep-pilot-zsek.onrender.com/`,
         { answer: transcript },
         {
             headers: {
