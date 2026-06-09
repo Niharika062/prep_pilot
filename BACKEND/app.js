@@ -6,7 +6,7 @@ import authRouter from "./routes/auth.routes.js";
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: ["http://localhost:5173", "https://prep-pilot-2kxj.vercel.app"]
 }));
 app.use(express.json());
 
