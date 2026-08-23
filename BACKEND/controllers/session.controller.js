@@ -14,7 +14,7 @@ const startSession = async (req, res) => {
         }
 
         const completion = await groqWithRetry({
-            model: "llama-3.3-70b-versatile",
+            model: "openai/gpt-oss-120b",
             messages: [
                 {
                     role: "user",
@@ -62,7 +62,7 @@ const startSessionWithResume = async (req, res) => {
         }
 
         const completion = await groqWithRetry({
-            model: "llama-3.3-70b-versatile",
+            model: "openai/gpt-oss-120b",
             messages: [
                 {
                     role: "user",
@@ -115,7 +115,7 @@ const submitAnswer = async (req, res) => {
 
         if (session.answers.length >= session.numberOfQuestions) {
             const reportCompletion = await groqWithRetry({
-                model: "llama-3.3-70b-versatile",
+                model: "openai/gpt-oss-120b",
                 messages: [
                     {
                         role: "user",
@@ -145,7 +145,7 @@ const submitAnswer = async (req, res) => {
         }
 
         const completion = await groqWithRetry({
-            model: "llama-3.3-70b-versatile",
+            model: "openai/gpt-oss-120b",
             messages: [
                 {
                     role: "user",
