@@ -13,4 +13,12 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/session", sessionRouter);
 
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.status(400).json({
+        success: false,
+        message: err.message || "Something went wrong"
+    });
+});
+
 export default app;

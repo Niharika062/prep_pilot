@@ -20,9 +20,10 @@ function Home() {
     const navigate = useNavigate()
 
     const startInterview = async () => {
-        setLoading(true)
-        const token = localStorage.getItem("token")
+    setLoading(true)
+    const token = localStorage.getItem("token")
 
+    try {
         let response;
 
         if (resume) {
@@ -48,8 +49,13 @@ function Home() {
 
         const { sessionId, questions } = response.data
         navigate(`/interview/${sessionId}`, { state: { question: questions } })
+    } catch (error) {
+        console.error(error)
+        alert(error.response?.data?.message || "Something went wrong. Please try again.")
+    } finally {
         setLoading(false)
     }
+}
 
     return (
         <div className="min-h-screen bg-gray-950 text-white flex items-center justify-center">
