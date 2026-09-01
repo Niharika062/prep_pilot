@@ -15,7 +15,11 @@ const sessionSchema= new mongoose.Schema({
         default:""
     },
     questions:[String],
-    answers:[String]
+    answers:[String],
+    resumeText:{
+        type:String,
+        default:""
+    }
 
 }, {timestamps:true});
 
